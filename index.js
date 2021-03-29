@@ -17,6 +17,14 @@ Do the following:
 
    HINT: no function required
 */
+var votingAge = 18 ;
+
+  if (votingAge>=18){
+
+console.log(true)
+
+}
+
 
 
 
@@ -30,6 +38,15 @@ Do the following:
 
    HINT: no function required
 */
+
+var x = 10;
+
+{
+  let x = 2;
+ 
+}
+
+
 
 
 
@@ -45,7 +62,13 @@ Do the following:
 
    HINT: look up the Number method
 */
-
+var num1 = 1999;
+var num2 = '1999';
+if (num1 === num2) {
+    console.log(true);
+} else {
+    console.log(false);
+}
 
 
 
@@ -57,10 +80,16 @@ Do the following:
    2. Receive the parameters: a and b
    3. Multiply a and b and return the answer
 */
+var a = 13;
+var b = 20;
+var c = a * b;
+function multiply(a,b) {
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+    return c;
+
+ 
   }
+  
 
 
 
@@ -73,9 +102,9 @@ Do the following:
    2. Use the received value to calculate the age in dog years (1 human year is equal to 7 dog years)
    3. Return the newly calculated age
 */
-
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+Var humanyears = 1 
+function dogYears(humanyears){
+    return humanyears*7
 }
 
 
@@ -107,9 +136,30 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
-  }
+function hungryDog(age, weight){
+	if(age >= 1){
+		if(weight <=5){
+			return weight *0.05;
+		} else if(weight <=10){
+			return weight *0.04;
+		} else if(weight <=15){
+			return weight *0.03;
+		} else {
+			return weight *0.02;
+		}
+	} else{
+		if(age >= (2/12) && age <= (4/12)){
+			return weight *0.10;
+		} else if(age > (4/12) && age <= (7/12)){
+			return weight *0.05;
+		} else if(age > (7/12) && age <= 1){
+			return weight *0.04;
+		} else{
+			console.log("error: puppy too young")
+			return 0;
+		}
+	}
+}
 
 
 
@@ -133,11 +183,47 @@ Use the game function below to do the following:
   
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
-
-function game(user, computer){
-    /*add your code here*/
+Function
+var userChoice = prompt("Do you choose rock, paper or scissors?");
+var computerChoice = Math.random();
+if (computerChoice < 0.34) {
+	computerChoice = "rock";
+} else if(computerChoice <= 0.67) {
+	computerChoice = "paper";
+} else {
+	computerChoice = "scissors";
 }
-  
+var compare=function(choice1,choice2){
+    if(choice1===choice2){
+        return "The result is a tie!";
+    }
+    else if(choice1==="rock"){
+        if(choice2==="scissors"){
+            return "rock wins"
+        }
+        else if(choice2==="paper"){
+            return "paper wins";
+        }
+    }
+    else if(choice1==="paper"){
+        if(choice2==="scissors"){
+            return "scissors win"
+        }
+        else if(choice2==="rock"){
+            return "paper wins";
+        }
+    }
+    else if(choice1==="scissors"){
+        if(choice2==="paper"){
+            return "scissors win"
+        }
+        else if(choice2==="rock"){
+            return "rock wins";
+        }
+    }
+    
+}
+console.log(compare(userChoice,computerChoice));
   
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -189,20 +275,34 @@ function annoyingSong(/*add your code here*/){
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 //Grade Calculator
-/*
-Using the grade function below do the following: 
+
+/* Using the grade function below do the following: 
   1. Receive a score out of 100 
   2. Return the corresponding letter grade following this grade scale:
 
-   90-100 should return 'you got an A' 
+   {90-100 should return 'you got an A'} 
    80-89 should return 'you got a B'
    70-79 should return 'you got a C'
    60-69 should return 'you got a D'
    below should return 'you got an F'
 */
   
-function grade(/*Your Code here */){
-  /*Your Code here */
+function grade(Grade){
+  if(points >= 90) {
+    return("Your letter grade is an A!");
+    }
+    if(points<=89&&points>=80) {
+    return("Your letter grade is a B !");
+    }
+    if(points<=79&&points>=70) {
+    return("Your letter grade is a C !");
+    }
+    if(points<=69&&points>=60) {
+    return("Your letter grade is a D !");
+    }
+    if(points<60) {
+    return("Your letter grade is an F !");
+    }
   }
   
   
@@ -220,10 +320,15 @@ Using the vowelCounter function below do the following:
 */
 
 
-function vowelCounter(/*add your code here*/) {
-    /*add your code here*/
+function vowelCounter(string){
+	var x = 0;
+	for(var i = 0; i < string.length; i++){
+		if(string[i] === 'a' || string[i] === 'e'|| string[i] === 'i' || string[i] === 'o' || string[i] === 'u'){
+			x++			
+		}
+	}
+	return x;
 }
-
 
 
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
